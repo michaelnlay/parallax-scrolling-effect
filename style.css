@@ -1,0 +1,74 @@
+/* https://www.youtube.com/watch?v=TawH-AqHTXc */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* max-width: 1920px; */
+}
+
+body {
+    background: #0a2a43;
+    min-height: 2500px;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Remove/cover open space from the background */
+section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #0a2a43, transparent);
+    /* background: linear-gradient(to right, #0a2a43, transparent); */
+
+    z-index: 100;
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a2a43;
+
+
+    z-index: 10000;
+    mix-blend-mode: color;
+}
+
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#text {
+    position: relative;
+    z-index: 2;
+    font-size: 150px;
+    color: white;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+#road{
+    z-index: 3;
+}
